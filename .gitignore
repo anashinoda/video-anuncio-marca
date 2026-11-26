@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+engine/node_modules/
+
+# Rendered outputs & temp media
+engine/out/
+raw_images/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db

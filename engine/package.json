@@ -1,0 +1,29 @@
+{
+  "name": "video-anuncio-marca-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Motor Remotion da skill video-anuncio-marca (Motion com Mascote, UGC e Híbrido)",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Reels9x16 out/video-9x16.mp4 --codec=h264 --crf=18",
+    "render:square": "remotion render src/index.ts Feed1x1 out/video-1x1.mp4 --codec=h264 --crf=18",
+    "render:feed": "remotion render src/index.ts Feed4x5 out/video-4x5.mp4 --codec=h264 --crf=18",
+    "render:landscape": "remotion render src/index.ts Landscape16x9 out/video-16x9.mp4 --codec=h264 --crf=18",
+    "still": "remotion still src/index.ts Reels9x16 out/preview.png --frame=45",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.240",
+    "@remotion/google-fonts": "^4.0.240",
+    "@remotion/media-utils": "^4.0.240",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.240"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.7.2"
+  }
+}

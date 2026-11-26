@@ -1,0 +1,92 @@
+import React from 'react';
+import {
+  AlarmClock,
+  Bot,
+  Briefcase,
+  CheckCheck,
+  Clapperboard,
+  Clock,
+  Code2,
+  Eye,
+  FilePenLine,
+  Folder,
+  GraduationCap,
+  Heart,
+  HelpCircle,
+  Hourglass,
+  Image as ImageIcon,
+  Keyboard,
+  Layers,
+  Lightbulb,
+  Megaphone,
+  MessageSquare,
+  Mic,
+  Monitor,
+  Palette,
+  Scissors,
+  Send,
+  ShieldCheck,
+  ShoppingBag,
+  Smartphone,
+  Sparkles,
+  Square,
+  Star,
+  Subtitles,
+  Target,
+  User,
+  Video,
+  Wand2,
+  Zap,
+  type LucideIcon,
+} from 'lucide-react';
+import { IconName } from '../types';
+
+const ICON_MAP: Record<IconName, LucideIcon> = {
+  script: FilePenLine,
+  scissors: Scissors,
+  captions: Subtitles,
+  sparkles: Sparkles,
+  clock: Clock,
+  hourglass: Hourglass,
+  alarm: AlarmClock,
+  bulb: Lightbulb,
+  send: Send,
+  message: MessageSquare,
+  mic: Mic,
+  video: Video,
+  clapper: Clapperboard,
+  megaphone: Megaphone,
+  eye: Eye,
+  target: Target,
+  check: CheckCheck,
+  shield: ShieldCheck,
+  bot: Bot,
+  folder: Folder,
+  image: ImageIcon,
+  keyboard: Keyboard,
+  heart: Heart,
+  star: Star,
+  monitor: Monitor,
+  smartphone: Smartphone,
+  square: Square,
+  shopping: ShoppingBag,
+  briefcase: Briefcase,
+  graduation: GraduationCap,
+  wand: Wand2,
+  palette: Palette,
+  user: User,
+  layers: Layers,
+  help: HelpCircle,
+  code: Code2,
+  zap: Zap,
+};
+
+export const AppIcon: React.FC<{
+  name: IconName;
+  size?: number;
+  color?: string;
+  strokeWidth?: number;
+}> = ({ name, size = 32, color = 'currentColor', strokeWidth = 2.3 }) => {
+  const Comp = ICON_MAP[name] || Sparkles;
+  return <Comp size={size} color={color} strokeWidth={strokeWidth} />;
+};
